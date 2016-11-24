@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="css/estilo.css" type="text/css">
+	
+	<script src="js/jquery.js" ></script>
+	<script src="js/plugin.js" ></script>
+	<script src="js/plugin2.js" ></script>
+    
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+
+
+
+
+    
+
+  <script>
+        jQuery(document).ready(function ($) {
+
+            
+            var jssor_1_SlideshowTransitions = [
+              {$Duration:1200,x:0.3,$During:{$Left:[0.3,0.7]},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:-0.3,$SlideOut:true,$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:-0.3,$During:{$Left:[0.3,0.7]},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,$SlideOut:true,$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:0.3,$During:{$Top:[0.3,0.7]},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:-0.3,$SlideOut:true,$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:-0.3,$During:{$Top:[0.3,0.7]},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:0.3,$SlideOut:true,$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,$Cols:2,$During:{$Left:[0.3,0.7]},$ChessMode:{$Column:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,$Cols:2,$SlideOut:true,$ChessMode:{$Column:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:0.3,$Rows:2,$During:{$Top:[0.3,0.7]},$ChessMode:{$Row:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:0.3,$Rows:2,$SlideOut:true,$ChessMode:{$Row:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:0.3,$Cols:2,$During:{$Top:[0.3,0.7]},$ChessMode:{$Column:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,y:-0.3,$Cols:2,$SlideOut:true,$ChessMode:{$Column:12},$Easing:{$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,$Rows:2,$During:{$Left:[0.3,0.7]},$ChessMode:{$Row:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:-0.3,$Rows:2,$SlideOut:true,$ChessMode:{$Row:3},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,y:0.3,$Cols:2,$Rows:2,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$ChessMode:{$Column:3,$Row:12},$Easing:{$Left:$Jease$.$InCubic,$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,x:0.3,y:0.3,$Cols:2,$Rows:2,$During:{$Left:[0.3,0.7],$Top:[0.3,0.7]},$SlideOut:true,$ChessMode:{$Column:3,$Row:12},$Easing:{$Left:$Jease$.$InCubic,$Top:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,$Delay:20,$Clip:3,$Assembly:260,$Easing:{$Clip:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,$Delay:20,$Clip:3,$SlideOut:true,$Assembly:260,$Easing:{$Clip:$Jease$.$OutCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,$Delay:20,$Clip:12,$Assembly:260,$Easing:{$Clip:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:1200,$Delay:20,$Clip:12,$SlideOut:true,$Assembly:260,$Easing:{$Clip:$Jease$.$OutCubic,$Opacity:$Jease$.$Linear},$Opacity:2}
+            ];
+            
+            var jssor_1_options = {
+              $AutoPlay: true,
+              $SlideshowOptions: {
+                $Class: $JssorSlideshowRunner$,
+                $Transitions: jssor_1_SlideshowTransitions,
+                $TransitionsOrder: 1
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $ThumbnailNavigatorOptions: {
+                $Class: $JssorThumbnailNavigator$,
+                $Cols: 10,
+                $SpacingX: 8,
+                $SpacingY: 8,
+                $Align: 360
+              }
+            };
+            
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+            
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizing
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 800);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            //responsive code end
+        });
+    </script>
+
+
+     <style>
+        
+        /* jssor slider arrow navigator skin 05 css */
+        /*
+        .jssora05l                  (normal)
+        .jssora05r                  (normal)
+        .jssora05l:hover            (normal mouseover)
+        .jssora05r:hover            (normal mouseover)
+        .jssora05l.jssora05ldn      (mousedown)
+        .jssora05r.jssora05rdn      (mousedown)
+        */
+        .jssora05l, .jssora05r {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            background: url('img/a17.png') no-repeat;
+            overflow: hidden;
+        }
+        .jssora05l { background-position: -10px -40px; }
+        .jssora05r { background-position: -70px -40px; }
+        .jssora05l:hover { background-position: -130px -40px; }
+        .jssora05r:hover { background-position: -190px -40px; }
+        .jssora05l.jssora05ldn { background-position: -250px -40px; }
+        .jssora05r.jssora05rdn { background-position: -310px -40px; }
+
+        /* jssor slider thumbnail navigator skin 01 css */
+        /*
+        .jssort01 .p            (normal)
+        .jssort01 .p:hover      (normal mouseover)
+        .jssort01 .p.pav        (active)
+        .jssort01 .p.pdn        (mousedown)
+        */
+        .jssort01 .p {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 72px;
+            height: 72px;
+        }
+        
+        .jssort01 .t {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .jssort01 .w {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .jssort01 .c {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 68px;
+            height: 68px;
+            border: #000 2px solid;
+            box-sizing: content-box;
+            background: url('img/t01.png') -800px -800px no-repeat;
+            _background: none;
+        }
+        
+        .jssort01 .pav .c {
+            top: 2px;
+            _top: 0px;
+            left: 2px;
+            _left: 0px;
+            width: 68px;
+            height: 68px;
+            border: #000 0px solid;
+            _border: #fff 2px solid;
+            background-position: 50% 50%;
+        }
+        
+        .jssort01 .p:hover .c {
+            top: 0px;
+            left: 0px;
+            width: 70px;
+            height: 70px;
+            border: #fff 1px solid;
+            background-position: 50% 50%;
+        }
+        
+        .jssort01 .p.pdn .c {
+            background-position: 50% 50%;
+            width: 68px;
+            height: 68px;
+            border: #000 2px solid;
+        }
+        
+        * html .jssort01 .c, * html .jssort01 .pdn .c, * html .jssort01 .pav .c {
+            /* ie quirks mode adjust */
+            width /**/: 72px;
+            height /**/: 72px;
+        }
+        
+    </style>
+
+</head>
+<body>
+
+     
+     
+   
+
+     <div class="datepicker"> </div>
+     <div class="timepicker"> </div>
+
+
+	<header>
+        <h1> El Rey Del Codigo </h1>
+    </header>
+    
+    <nav>
+       <ul>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Conoce mas</a></li>
+        <li><a href="#">Archivos</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li class="subscribirse"><a href="#">Subscribirse</a></li>
+       </ul>
+        <!-- Navigation -->
+    </nav>
+    <br><br><br>
+
+
+    <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 800px; height: 456px; overflow: hidden; visibility: hidden; background-color: #24262e;">
+        <!-- Loading Screen -->
+        <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+            <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+        </div>
+        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 800px; height: 356px; overflow: hidden;">
+            <div data-p="144.50" style="display: none;">
+                <img data-u="image" src="img/01.jpg" />
+                <img data-u="thumb" src="img/thumb-01.jpg" />
+            </div>
+            <div data-p="144.50" style="display: none;">
+                <img data-u="image" src="img/02.jpg" />
+                <img data-u="thumb" src="img/thumb-02.jpg" />
+            </div>
+            <div data-p="144.50" style="display: none;">
+                <img data-u="image" src="img/03.jpg" />
+                <img data-u="thumb" src="img/thumb-03.jpg" />
+            </div>
+            <div data-p="144.50" style="display: none;">
+                <img data-u="image" src="img/04.jpg" />
+                <img data-u="thumb" src="img/thumb-04.jpg" />
+            </div>
+            <div data-p="144.50" style="display: none;">
+                <img data-u="image" src="img/05.jpg" />
+                <img data-u="thumb" src="img/thumb-05.jpg" />
+            </div>
+            <div data-p="144.50" style="display: none;">
+                <img data-u="image" src="img/06.jpg" />
+                <img data-u="thumb" src="img/thumb-06.jpg" />
+            </div>
+            <div data-p="144.50" style="display: none;">
+                <img data-u="image" src="img/07.jpg" />
+                <img data-u="thumb" src="img/thumb-07.jpg" />
+            </div>
+            <div data-p="144.50" style="display: none;">
+                <img data-u="image" src="img/08.jpg" />
+                <img data-u="thumb" src="img/thumb-08.jpg" />
+            </div>
+            <div data-p="144.50" style="display: none;">
+                <img data-u="image" src="img/09.jpg" />
+                <img data-u="thumb" src="img/thumb-09.jpg" />
+            </div>
+            <div data-p="144.50" style="display: none;">
+                <img data-u="image" src="img/10.jpg" />
+                <img data-u="thumb" src="img/thumb-10.jpg" />
+            </div>
+            <div data-p="144.50" style="display: none;">
+                <img data-u="image" src="img/11.jpg" />
+                <img data-u="thumb" src="img/thumb-11.jpg" />
+            </div>
+            <div data-p="144.50" style="display: none;">
+                <img data-u="image" src="img/12.jpg" />
+                <img data-u="thumb" src="img/thumb-12.jpg" />
+            </div>
+        </div>
+        <!-- Thumbnail Navigator -->
+        <div data-u="thumbnavigator" class="jssort01" style="position:absolute;left:0px;bottom:0px;width:800px;height:100px;" data-autocenter="1">
+            <!-- Thumbnail Item Skin Begin -->
+            <div data-u="slides" style="cursor: default;">
+                <div data-u="prototype" class="p">
+                    <div class="w">
+                        <div data-u="thumbnailtemplate" class="t"></div>
+                    </div>
+                    <div class="c"></div>
+                </div>
+            </div>
+            <!-- Thumbnail Item Skin End -->
+        </div>
+        <!-- Arrow Navigator -->
+        <span data-u="arrowleft" class="jssora05l" style="top:158px;left:8px;width:40px;height:40px;"></span>
+        <span data-u="arrowright" class="jssora05r" style="top:158px;right:8px;width:40px;height:40px;"></span>
+        <a href="http://www.jssor.com" style="display:none">Bootstrap Carousel</a>
+    </div>
+
+
+    <section id="intro"><!-- Introduction -->
+         <Header>
+           <H2><font color="white">¿Te gusta la Programación? </H2></font> 
+           <!--<div id="intro2"></div> -->
+         </Header>
+    <P> <font color="white" size="4"> El desearrollo de software es una herramienta muy importante para la automatizacion de muchos procesos </font></P>    
+    </section>
+    
+
+	<div class="social">
+		<ul>
+			<li><a href="http://www.facebook.com"
+			 class="icon-facebook"></a></li>
+
+			<li><a href="http://www.twitter.com" 
+			 class="icon-twitter"></a></li>
+			<li><a href="http://www.googleplus.com"  class="icon-googleplus"></a></li>
+		</ul>
+	</div>
+
+    <div id="contenido">
+    <div id="ContenidoP">
+
+    <section><!-- contenido area -->
+
+
+
+        <article class="blog">
+        <header>
+            <h2>Desarrollo de Software</h2>
+            <p>Publicado en <time datetime="2015-12-29T13:38:45-07:00">Diciembre 08 2015</time> por <a href="#">Wili Dominguez</a> - <a href="#comments">3 comentarios</a></p>
+        </header>
+
+        <div id="div1">
+        
+        <p align="justify">Un lenguaje de programación es un lenguaje formal diseñado para realizar procesos que pueden ser llevados a cabo por máquinas como las computadoras.
+
+        Pueden usarse para crear programas que controlen el comportamiento físico y lógico de una máquina, para expresar algoritmos con precisión, o como modo de comunicación humana.1
+
+        Está formado por un conjunto de símbolos y reglas sintácticas y semánticas que definen su estructura y el significado de sus elementos y expresiones. Al proceso por el cual se escribe, se prueba, se depura, se compila (de ser necesario) y se mantiene el código fuente de un programa informático se le llama programación.
+
+        También la palabra programación se define como el proceso de creación de un programa de computadora, mediante la aplicación de procedimientos lógicos, a través de los siguientes pasos:</p>
+        
+        <p align="justify">
+        El desarrollo lógico del programa para resolver un problema en particular.
+        Escritura de la lógica del programa empleando un lenguaje de programación específico (codificación del programa).
+        Ensamblaje o compilación del programa hasta convertirlo en lenguaje de máquina.
+        Prueba y depuración del programa.
+        Desarrollo de la documentación.
+        </p><img src="img/fondo1.jpg">
+
+
+        <p align="justify">Existe un error común que trata por sinónimos los términos 'lenguaje de programación' y 'lenguaje informático'. Los lenguajes informáticos engloban a los lenguajes de programación y a otros más, como por ejemplo HTML (lenguaje para el marcado de páginas web que no es propiamente un lenguaje de programación, sino un conjunto de instrucciones que permiten estructurar el contenido de los documentos).
+
+        Permite especificar de manera precisa sobre qué datos debe operar una computadora, cómo deben ser almacenados o transmitidos y qué acciones debe tomar bajo una variada gama de circunstancias. Todo esto, a través de un lenguaje que intenta estar relativamente próximo al lenguaje humano o natural. Una característica relevante de los lenguajes de programación es precisamente que más de un programador pueda usar un conjunto común de instrucciones que sean comprendidas entre ellos para realizar la construcción de un programa de forma colaborativa.</p>
+
+        </div>
+
+        
+
+
+
+
+    </article>
+    </section>
+    
+    <HR SIZE=5 WIDTH=100% ALIGN=center>
+    <section id="comentarios">  <!-- section comentarios -->
+    <header>
+        <h3>Comentarios</h3>
+    </header>
+    <article>
+        <header>
+            <a href="#">Jesus Perez</a> on <time datetime="2015-12-08T13:35:20-07:00">Diciembre 8th 2015 at 13:35</time>
+        </header>
+        <p>JavaScript (abreviado comúnmente "JS") es un lenguaje de programación interpretado, dialecto del estándar ECMAScript.Se define como orientado a objetos,3 basado en prototipos, imperativo, débilmente tipado y dinámico.</p>
+    </article>
+    <article>
+        <header>
+           <a href="#">Maria Dominguez</a> on <time datetime="2009-06-29T23:40:09+01:00">Diciembre 8th 2015 at 13:35</time>
+        </header>
+        <p>JavaScript (abreviado comúnmente "JS") es un lenguaje de programación interpretado, dialecto del estándar ECMAScript.Se define como orientado a objetos,3 basado en prototipos, imperativo, débilmente tipado y dinámico.</p>
+    </article>
+    
+    <article>
+        <header>
+           <a href="#">Jesus Dominguez</a> on <time datetime="2009-06-29T23:40:09+01:00">Diciembre 8th 2015 at 13:35</time>
+        </header>
+        <p>JavaScript (abreviado comúnmente "JS") es un lenguaje de programación interpretado, dialecto del estándar ECMAScript.Se define como orientado a objetos,3 basado en prototipos, imperativo, débilmente tipado y dinámico.</p>
+    </article>
+
+
+
+
+    </section>
+    
+    <br>
+    <HR SIZE=5 WIDTH=100% ALIGN=center>
+    
+
+    <form action="#" method="post">
+    <h3>Publicar Comentario</h3>
+    <p>
+        <label for="name">Nombre</label>
+        <input name="name" id="name" type="text" required />
+    </p>
+    <p>
+        <label for="email">E-mail</label>
+        <input name="email" id="email" type="email" required />
+    </p>
+    <p>
+        <label for="website">Sitio Web</label>
+        <input name="website" id="website" type="url" />
+    </p>
+    <p>
+        <label for="comment">Comentario</label>
+        <textarea name="comment" id="comment" required></textarea>
+    </p>
+    <p><input type="submit" value="Publicar comentario" /></p>
+    </form>
+     
+    </div>
+
+    
+
+
+    <HR SIZE=5 WIDTH=100% ALIGN=center>
+
+    <aside><!-- Sidebar --><font color="white">
+        <section>
+				<header>
+					<h3>Categorias</h3>
+				</header>
+				<ul>
+				<li><a href="#">Lenguaje Máquina</a></li>
+					<li><a href="#"> bajo nivel</a></li>
+					<li><a href="#"> alto nivel</a></li>
+					<li><a href="#">orientado a objetos</a></li>
+					<li><a href="#">orientado al problema</a></li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h3>Archivos</h3>
+				</header>
+				<ul>
+				<li><a href="#">Diciembre 2015</a></li>
+				<li><a href="#">Junio 2015</a></li>
+				<li><a href="#">Enero 2014</a></li>
+					<li><a href="#">Marzo 2014</a></li>
+					<li><a href="#">April 2013</a></li>
+					<li><a href="#">Mayo 2012</a></li>
+					<li><a href="#">Marzo 2012</a></li>
+				</ul>
+			</section>
+           
+
+     </font> </aside>
+    
+    </div>
+
+
+    <HR SIZE=5 WIDTH=100% ALIGN=center>
+    <footer> <!-- Footer -->
+    <div id="pie">
+
+                <center>
+
+			    <div id="pie2">
+
+				<header><font color="white" size="2">
+					<h3>Acerca</h3>
+				</header>
+				<p>
+				Un lenguaje de programación es un lenguaje formal diseñado para realizar procesos que pueden ser llevados a cabo por máquinas como las computadoras.
+
+                Pueden usarse para crear programas que controlen el comportamiento físico y lógico de una máquina, para expresar algoritmos con precisión, o como modo de comunicación humana.
+                </p></font>
+
+				 </div>
+			
+			
+
+			<div id="pie2"><font color="white" size="2">
+				<header>
+					<h3>Lenguajes</h3>
+				</header>
+				<ul>
+					<li><a href="#">C#</a></li>
+					<li><a href="#">Java</a></li>
+					<li><a href="#">Cobol</a></li>
+					<li><a href="#">C++</a></li>
+					<li><a href="#">JavaScript</a></li>
+					<li><a href="#">Python</a></li>
+					<li><a href="#">Visual Basic .NET</a></li>
+					<li><a href="#">Visual FoxPro</a></li>
+				</ul>
+			</div>
+
+			</center>
+		</div></font>
+
+
+    </footer>
+    <h1>cambios de MARTIN</h1>
+ 
+</body>
+
+</html>
